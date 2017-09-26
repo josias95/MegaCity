@@ -1,0 +1,2 @@
+module MegacitiesHelper
+end

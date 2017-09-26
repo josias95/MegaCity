@@ -1,0 +1,44 @@
+.button {
+	height: 25px;
+	width: 80px;
+}
+
+#password{
+	height:25px;
+	width: 170px; 
+}
+
+#mail{
+	height: 25px;
+	width: 170px;
+}
+
+.btn {
+	position:absolute;
+	right: 0px;
+	top: 58px;
+}
+ 
+
+.pass {
+	position: absolute;
+	right: 130px;
+	top: 60px;
+}
+
+.contra {
+	position: absolute;
+	right:130px;
+	top: 30px;
+}
+
+.text_mail {
+	position: absolute;
+	right: 350px;
+	top: 60px;
+}
+
+.correo{
+	position: absolute;
+	right: 350px;
+}

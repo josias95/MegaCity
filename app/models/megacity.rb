@@ -1,0 +1,2 @@
+class Megacity < ApplicationRecord
+end
