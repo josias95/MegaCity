@@ -31,6 +31,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 #Use foundation
 gem 'foundation-rails', '~> 6.4', '>= 6.4.1.2'
+gem 'paperclip'
+gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
