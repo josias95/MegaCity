@@ -1,0 +1,20 @@
+<%= form_for(@factura) do |f| %>
+	<% @factura.errors.full_messages.each do |message| %>
+		<div class="be-red white top-space">
+			* <%= message %>
+		</div>
+	<%end%>
+	<div class="field">
+		<%= f.text_field :estado, placeholder: "estado de factura", class:"form-control" %>
+	</div>
+	<div class="field">
+		Factura: <%= f.file_field :cover %>
+	</div>
+	<div class="field">
+		<%= f.text_field :valor, placeholder: "escriba el valor", class:"form-control" %>
+	</div>
+	
+	<div class="field">
+		<%= f.submit "Guardar", class:"btn be-red white" %>
+	</div>
+<%end%>
