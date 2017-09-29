@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :facturas
   resources :megacities
   get '/usuario', to: 'usuario#sesion'
   post '/usuario', to: 'usuario#sesion'

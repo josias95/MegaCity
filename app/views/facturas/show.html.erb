@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @factura.estado %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @factura.valor %>
+</p>
+
+<div class="field">
+	<%= image_tag @factura.cover.url(:thumb) %>
+</div>
+
+<%= link_to 'Edit', edit_factura_path(@factura) %> |
+<%= link_to 'Back', facturas_path %>
