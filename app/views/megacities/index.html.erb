@@ -13,38 +13,40 @@
                 <h1>MegaCity</h1>
             </div>
 
+             <%= form_tag({:controller => "usuario", :action => "sesion"}, :method => "post") do %>
             <div class="large-2 columns correo">
-                <p>Correo Electronico</p>
+                <%= label_tag "nombre", "nombre de usuario" %>
             </div>
 
             <div class="large-2 columns text_mail">
-                <input type="email" name="user_mail" id="mail">
+                <%= text_field_tag "nombre", "", :size => 5, :maxlenght => 5, :placeholder => "nombre", :required => "required" %>
             </div>
 
             <div class="large-2 columns contra">
-                <p>Contraseña</p>
+                <%= label_tag "contrasena", "Contrasena de usuario" %>
             </div>
 
-            <div class="large-2 columns text_contra pass">
-                <input type="password" name="user_password" id="password">
+            <div class="large-2 columns pass">
+                <%= text_field_tag "contrasena", "", :size => 5, :maxlenght => 5, :placeholder => "contraseña", :required => "required" %>
             </div>
 
             <div class="large-1 columns btn">
-                <a href="about.html" class="button">Log In</a>
+               <%= submit_tag "Enviar" %>
             </div>
+
+            <% end %>
         </div>
     </header>
     
-    <%= form_tag({:controller => "usuario", :action => "sesion"}, :method => "post") do %>
+   
 
-    <%= label_tag "nombre", "nombre de usuario" %>
-    <%= text_field_tag "nombre", "", :size => 5, :maxlenght => 5, :placeholder => "nombre", :required => "required" %>
+    
+   
 
-    <%= label_tag "contrasena", "contrasena de usuario" %>
-    <%= text_field_tag "contrasena", "", :size => 5, :maxlenght => 5, :placeholder => "contrasena", :required => "required" %>
-    <br />
-    <%= submit_tag "Enviar" %>
-    <% end %>
+   
+    
+   
+    
 
 </body>
 

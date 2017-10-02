@@ -1,26 +1,13 @@
-.button {
-	height: 25px;
-	width: 80px;
-}
-
-#password{
-	height:25px;
-	width: 170px; 
-}
-
-#mail{
-	height: 25px;
-	width: 170px;
-}
-
 .btn {
 	position:absolute;
 	right: 0px;
-	top: 58px;
+	top: 70px;
 }
  
 
 .pass {
+	height:5px;
+	width: 227px; 
 	position: absolute;
 	right: 130px;
 	top: 60px;
@@ -33,6 +20,8 @@
 }
 
 .text_mail {
+	height: 5px;
+	width: 227px;
 	position: absolute;
 	right: 350px;
 	top: 60px;
