@@ -1,52 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript" src="ValidarInicioSesion.js"></script>
-    <title>Centro Comercial MegaCity</title>
+    
 </head>
 
 <body>
     <header>
-        <div class="row">
-            <div class="large-2 columns">
-                <h1>MegaCity</h1>
-            </div>
-
-             <%= form_tag({:controller => "usuario", :action => "sesion"}, :method => "post") do %>
-            <div class="large-2 columns correo">
-                <%= label_tag "nombre", "nombre de usuario" %>
-            </div>
-
-            <div class="large-2 columns text_mail">
-                <%= text_field_tag "nombre", "", :size => 5, :maxlenght => 5, :placeholder => "nombre", :required => "required" %>
-            </div>
-
-            <div class="large-2 columns contra">
-                <%= label_tag "contrasena", "Contrasena de usuario" %>
-            </div>
-
-            <div class="large-2 columns pass">
-                <%= text_field_tag "contrasena", "", :size => 5, :maxlenght => 5, :placeholder => "contraseña", :required => "required" %>
-            </div>
-
-            <div class="large-1 columns btn">
-               <%= submit_tag "Enviar" %>
-            </div>
-
-            <% end %>
-        </div>
+        
     </header>
-    
-   
-
-    
-   
-
-   
-    
-   
-    
-
 </body>
 

@@ -1,19 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Centro Comercial MegaCity</title>
+        <title>Centro Comercial MegaCity</title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
+        <%= stylesheet_link_tag    "application" %>
+        <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <header>
+            <div class="row">
+                <div class="large-6 columns">
+                    <h1>MegaCity</h1>
+                </div>
+                <div class="large-6 columns nombre_usuario">
+                    <% if usuario_signed_in? %>
+                        <%= current_usuario.nombre %>
+                    <%end%>
+                    <div class="row align-right">
+                        <nav>
+                            <ul>
+                                <div class="large-2 columns"><li><%= link_to "Inicio", root_path %></li></div>
+                                <div class="large-2 columns"><li><%= link_to "Almacenes", root_path %></li></div>
+                                <div class="large-2 columns"><li><%= link_to "Eventos", root_path %></li></div>
+                                <div class="large-2 columns"><li><%= link_to "Contactenos", root_path %></li></div>
+                                <% if usuario_signed_in? %>
+                                    <% unless current_usuario.is_admin? %>
+                                        <div class="large-2 columns">
+                                            <li><%= link_to "Facturas", cliente_path %></li>
+                                        </div>
+                                    <% else %>
+                                        <div class="large-2 columns"><li><a href="facturas">Facturas</a></li></div>
+                                    <% end %>
+                                    <div class="large-2 columns">
+                                        <li><%= link_to "Cerrar sesion", destroy_usuario_session_path, method: :delete %></li>
+                                    </div>
+                                <% else %>
+                                    <div class="large-2 columns">
+                                        <li><%= link_to "Iniciar sesion", new_usuario_session_path %></li>
+                                    </div>
+                                    <div class="large-2 columns">
+                                        <li><%= link_to "Crear cuenta", new_usuario_registration_path %></li>
+                                    </div>
+                                <%end%>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>        
+        </header>
 
-  <body>
+        <p class="notice"><%= notice %></p>
+        <!--<p class="alert"><%= alert %></p>-->
 
-    <%= yield %>
+        <%= yield %>
 
-  </body>
+    </body>
 </html>

@@ -1,5 +1,11 @@
-<h1>New Factura</h1>
+<h1>Subir Factura</h1>
 
-<%= render 'form', factura: @factura %>
+<%= form_for([@usuario, @factura]) do |form| %>
+    <div class="field">
+        Factura: <%= form.file_field :cover %>
+    </div>
 
-<%= link_to 'Back', facturas_path %>
+    <div class="actions">
+        <%= form.submit %>
+    </div>
+<% end %>

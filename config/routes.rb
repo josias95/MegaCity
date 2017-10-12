@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
+  get '/cliente', to: 'facturas#indexCliente', as:'cliente'
   resources :facturas
-  resources :megacities
-  get '/usuario', to: 'usuario#sesion'
-  post '/usuario', to: 'usuario#sesion'
-
+  devise_for :usuarios
+  root 'megacities#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

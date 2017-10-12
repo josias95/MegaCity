@@ -20,11 +20,12 @@
         <%= form.label :valor %>
         <%= form.number_field :valor, id: :factura_valor %>
     </div>
-
-    <div class="field">
-        Factura: <%= form.file_field :cover %>
-    </div>
-
+        <div class="field">
+            <% if current_usuario.is_admin? %>
+                <%= image_tag @factura.cover.url(:thumb) %>
+            <%end%>
+            <%= form.file_field :cover %>
+        </div>
     <div class="actions">
         <%= form.submit %>
     </div>

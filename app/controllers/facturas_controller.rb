@@ -1,15 +1,28 @@
 class FacturasController < ApplicationController
   before_action :set_factura, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_usuario!
+  before_action :authenticate_admin!, only: [:index, :edit, :destroy]
   # GET /facturas
   # GET /facturas.json
   def index
     @facturas = Factura.all
   end
 
+  def indexCliente
+    id = current_usuario.id
+    facturas = Factura.all
+    @facturas = []
+    facturas.each do|f|
+        if id == f.usuario_id
+            @facturas.push(f)
+        end
+    end
+  end
+
   # GET /facturas/1
   # GET /facturas/1.json
   def show
+
   end
 
   # GET /facturas/new
@@ -19,12 +32,13 @@ class FacturasController < ApplicationController
 
   # GET /facturas/1/edit
   def edit
+
   end
 
   # POST /facturas
   # POST /facturas.json
   def create
-    @factura = Factura.new(factura_params)
+    @factura = current_usuario.facturas.new(factura_params)
 
     respond_to do |format|
       if @factura.save
@@ -62,6 +76,10 @@ class FacturasController < ApplicationController
   end
 
   private
+
+    def validate_usuario
+      redirect_to new_usuario_session_path notice: "Necesitas iniciar sesion"
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_factura
       @factura = Factura.find(params[:id])
