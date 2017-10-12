@@ -5,8 +5,10 @@
 <table>
   <thead>
     <tr>
+      <th>Usuario</th>
       <th>Estado</th>
       <th>Valor</th>
+      <th>Fecha</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +16,10 @@
   <tbody>
     <% @facturas.each do |factura| %>
       <tr>
+        <td><%= factura.usuario_id %></td>
         <td><%= factura.estado %></td>
         <td><%= factura.valor %></td>
+        <td><%= factura.created_at %></td>
         <td><%= link_to 'Show', factura %></td>
         <td><%= link_to 'Edit', edit_factura_path(factura) %></td>
         <td><%= link_to 'Destroy', factura, method: :delete, data: { confirm: 'Are you sure?' } %></td>
