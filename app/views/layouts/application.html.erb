@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display|Teko" rel="stylesheet">
 
-        <title>Centro Comercial MegaCity</title>
+    <title>MegaCity</title>
 
-        <%= stylesheet_link_tag    "application" %>
-        <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
-        <%= csrf_meta_tags %>
-    </head>
-    <body>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
         <header>
             <div class="row">
-                <div class="large-6 columns">
-                    <h1>MegaCity</h1>
+                <div class="small-12 large-6 columns">
+                    <%= image_tag  "Logo.jpg",:class=>"img1"%>
                 </div>
                 <div class="large-6 columns nombre_usuario">
                     <% if usuario_signed_in? %>
                         <%= current_usuario.nombre %>
                     <%end%>
-                    <div class="row align-right">
+                    <div class="row align-right items">
                         <nav>
                             <ul>
-                                <div class="large-2 columns"><li><%= link_to "Inicio", root_path %></li></div>
-                                <div class="large-2 columns"><li><%= link_to "Almacenes", root_path %></li></div>
-                                <div class="large-2 columns"><li><%= link_to "Eventos", root_path %></li></div>
-                                <div class="large-2 columns"><li><%= link_to "Contactenos", root_path %></li></div>
+                                <div class="small-6 large-2 columns"><li><%= link_to "Inicio", root_path %></li></div>
+                                <div class="small-6 large-2 columns"><li><%= link_to "Almacenes", root_path %></li></div>
+                                <div class="small-6 large-2 columns"><li><%= link_to "Eventos", root_path %></li></div>
+                                <div class="small-6 large-2 columns"><li><%= link_to "Contactenos", root_path %></li></div>
                                 <% if usuario_signed_in? %>
                                     <% unless current_usuario.is_admin? %>
                                         <div class="large-2 columns">
@@ -39,10 +41,10 @@
                                         <li><%= link_to "Cerrar sesion", destroy_usuario_session_path, method: :delete %></li>
                                     </div>
                                 <% else %>
-                                    <div class="large-2 columns">
+                                    <div class="small-6 large-2 columns">
                                         <li><%= link_to "Iniciar sesion", new_usuario_session_path %></li>
                                     </div>
-                                    <div class="large-2 columns">
+                                    <div class="small-6 large-2 columns">
                                         <li><%= link_to "Crear cuenta", new_usuario_registration_path %></li>
                                     </div>
                                 <%end%>
@@ -58,5 +60,5 @@
 
         <%= yield %>
 
-    </body>
+    </body>    
 </html>

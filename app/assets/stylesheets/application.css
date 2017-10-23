@@ -13,15 +13,5 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
- *= require foundation
-
+ *= require flexslider.css
  */
-
-nav ul {
-	list-style: none;
-	text-align: right;
-}
-
-.nombre_usuario h3 {
-	text-align: right;
-}
