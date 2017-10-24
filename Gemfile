@@ -33,8 +33,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'foundation-rails', '~> 6.3.1.0'
 gem 'paperclip'
 gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
- gem 'jquery-rails'
-  gem 'flexslider'
+gem 'jquery-rails'
+gem 'flexslider'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

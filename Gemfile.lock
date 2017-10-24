@@ -512,6 +512,8 @@ GEM
     ffi (1.9.18-x86-mingw32)
     flexslider (2.2.0)
       sass-rails (>= 3.1.0)
+    font-awesome-rails (4.7.0.2)
+      railties (>= 3.2, < 5.2)
     foundation-rails (6.3.1.0)
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
@@ -642,6 +644,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   flexslider
+  font-awesome-rails (~> 4.7, >= 4.7.0.2)
   foundation-rails (~> 6.3.1.0)
   jbuilder (~> 2.5)
   jquery-rails
