@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :eventos
+  resources :almacens
   get '/cliente', to: 'facturas#indexCliente', as:'cliente'
   resources :facturas
   devise_for :usuarios

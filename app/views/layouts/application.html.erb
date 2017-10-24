@@ -26,8 +26,8 @@
                         <nav>
                             <ul>
                                 <div class="small-6 large-2 columns"><li><%= link_to "Inicio", root_path %></li></div>
-                                <div class="small-6 large-2 columns"><li><%= link_to "Almacenes", root_path %></li></div>
-                                <div class="small-6 large-2 columns"><li><%= link_to "Eventos", root_path %></li></div>
+                                <div class="small-6 large-2 columns"><li><%= link_to "Almacenes", almacens_path %></li></div>
+                                <div class="small-6 large-2 columns"><li><%= link_to "Eventos", eventos_path %></li></div>
                                 <div class="small-6 large-2 columns"><li><%= link_to "Contactenos", root_path %></li></div>
                                 <% if usuario_signed_in? %>
                                     <% unless current_usuario.is_admin? %>
