@@ -32,16 +32,14 @@
 	right: 350px;
 }
 
-.items {
-	a{
-	font-family: 'Teko', sans-serif ;
+.items ul li {
+
+	font-family: 'Playfair Display', serif;
 	font-size: large;
 	text-align: center;
-	margin-top: 30px;
-	}
-	li{
-		list-style: none;
-	}
+	margin-top: 15px;
+	list-style: none;
+	
 }
 
 .somos {
@@ -56,11 +54,10 @@
 
 h1,h2,h3,h4,h5,h6 {
 	font-family: 'Playfair Display', serif;
+	text-decoration-style: bold;
 }
 
-p {
-	font-family: 'Open Sans Condensed', sans-serif;
-}
+
 
 .flex-direction-nav a.flex-prev::before { 
 
@@ -83,11 +80,40 @@ p {
 
 }
 
-.flexslider:hover .flex-prev{
-	
+
+.categorias1, .categorias2, .categorias3, .eventos, .horario_atencion, .contacto {
+	margin-top: 50px;
+	text-align: center;
 }
 
-.flexslider:hover .flex-next{
-	
+.categorias2, .categorias3 {
+	margin-top: 20px;
 }
 
+.horarios  {
+	text-align: center;
+	margin-top: 15px;
+}
+
+.contacto {
+	margin-top: 50px;
+}
+
+.btn_contacto {
+	background-color: white; 
+}
+
+* {
+	background-color: #C2D7FE;
+}
+
+.img1 {
+	height: 300px;
+	width: 300px;
+	border: 2px solid grey;
+	margin: 0;
+	padding: 0;
+	border-radius: 140px;
+	overflow: hidden;
+
+}

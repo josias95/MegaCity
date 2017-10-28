@@ -15,14 +15,14 @@
   <body>
         <header>
             <div class="row">
-                <div class="small-12 large-6 columns">
+                <div class="small-12 large-6 columns text-center">
                     <%= image_tag  "Logo.jpg",:class=>"img1"%>
                 </div>
                 <div class="large-6 columns nombre_usuario">
                     <% if usuario_signed_in? %>
                         <%= current_usuario.nombre %>
                     <%end%>
-                    <div class="row align-right items">
+                    <div class="row items">
                         <nav>
                             <ul>
                                 <div class="small-6 large-2 columns"><li><%= link_to "Inicio", root_path %></li></div>
