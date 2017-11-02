@@ -4,8 +4,8 @@
             <%= image_tag  "Logo.jpg",:class=>"img1"%>
         </div>
         <div class="large-6 columns nombre_usuario">
-            <% if usuario_signed_in? %>
-                <%= current_usuario.nombre %>
+            <% if usuario_signed_in? && !current_usuario.is_admin? %>
+                <%= current_usuario.puntos %>
             <%end%>
             <div class="row items">
                     <ul class="menu align-right">
