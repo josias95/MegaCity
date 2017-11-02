@@ -19,10 +19,11 @@
 //= require jquery.flexslider
   $( document ).ready(function() {
 // Handler for .ready() called.
-	$( document ).on('turbolinks:load', function() { $(document).foundation(); })
-	$('.flexslider').flexslider({
-		prevText: "",
-		nextText: ""
-	});
-
+	$( document ).on('turbolinks:load', function() { 
+		$(document).foundation();
+		$('.flexslider').flexslider({
+			prevText: "",
+			nextText: ""
+		});
+	 })
 });

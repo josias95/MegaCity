@@ -1,0 +1,50 @@
+<header>
+    <div class="row">
+        <div class="small-12 large-6 columns text-center">
+            <%= image_tag  "Logo.jpg",:class=>"img1"%>
+        </div>
+        <div class="large-6 columns nombre_usuario">
+            <% if usuario_signed_in? %>
+                <%= current_usuario.nombre %>
+            <%end%>
+            <div class="row items">
+                    <ul class="menu align-right">
+                        <div class="small-6 large-2 columns"><li><%= link_to "Inicio", root_path %></li></div>
+                        <div class="small-6 large-2 columns"><li><%= link_to "Almacenes", almacens_path %></li></div>
+                        <div class="small-6 large-2 columns"><li><%= link_to "Eventos", eventos_path %></li></div>
+                        <div class="small-6 large-2 columns"><li><%= link_to "Contactenos", root_path %></li></div>
+                        <% if usuario_signed_in? %>
+                            <% unless current_usuario.is_admin? %>
+
+                                <div class="large-2 columns">
+                                    <li><%= link_to "Facturas", cliente_path %></li>
+                                </div>
+
+                            <% else %>
+
+                                <div class="large-2 columns"><li><a href="facturas">Facturas</a></li></div>
+
+                            <% end %>
+
+                            <div class="large-2 columns">
+                                <li><%= link_to "Premios", premios_path %></li>
+                            </div>
+                            <div class="large-2 columns">
+                                <li><%= link_to "Cerrar sesion", destroy_usuario_session_path, method: :delete %></li>
+                            </div>
+
+                        <% else %>
+
+                            <div class="small-6 large-2 columns">
+                                <li><%= link_to "Iniciar sesion", new_usuario_session_path %></li>
+                            </div>
+                            <div class="small-6 large-2 columns">
+                                <li><%= link_to "Crear cuenta", new_usuario_registration_path %></li>
+                            </div>
+
+                        <%end%>
+                    </ul>
+            </div>
+        </div>
+    </div>        
+</header>

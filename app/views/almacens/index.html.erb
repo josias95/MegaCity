@@ -22,9 +22,11 @@
         <td><%= almacen.descripcion %></td>
         <td><%= almacen.telefono %></td>
         <td><%= almacen.horario %></td>
-        <td><%= link_to 'Show', almacen %></td>
-        <td><%= link_to 'Edit', edit_almacen_path(almacen) %></td>
-        <td><%= link_to 'Destroy', almacen, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if usuario_signed_in? && current_usuario.is_admin? %>
+          <td><%= link_to 'Show', almacen %></td>
+          <td><%= link_to 'Edit', edit_almacen_path(almacen) %></td>
+          <td><%= link_to 'Destroy', almacen, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +34,6 @@
 
 <br>
 
-<%= link_to 'New Almacen', new_almacen_path %>
+<% if usuario_signed_in? && current_usuario.is_admin? %>
+  <%= link_to 'New Almacen', new_almacen_path %>
+<% end %>

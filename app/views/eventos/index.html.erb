@@ -20,9 +20,11 @@
         <td><%= evento.descripcion %></td>
         <td><%= evento.fecha %></td>
         <td><%= evento.hora %></td>
-        <td><%= link_to 'Show', evento %></td>
-        <td><%= link_to 'Edit', edit_evento_path(evento) %></td>
-        <td><%= link_to 'Destroy', evento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if usuario_signed_in? && current_usuario.is_admin? %>
+          <td><%= link_to 'Show', evento %></td>
+          <td><%= link_to 'Edit', edit_evento_path(evento) %></td>
+          <td><%= link_to 'Destroy', evento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +32,6 @@
 
 <br>
 
-<%= link_to 'New Evento', new_evento_path %>
+<% if usuario_signed_in? && current_usuario.is_admin? %>
+  <%= link_to 'New Evento', new_evento_path %>
+<% end %>

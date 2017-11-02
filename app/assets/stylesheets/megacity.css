@@ -103,7 +103,7 @@ h1,h2,h3,h4,h5,h6 {
 	background-color: white; 
 }
 
-* {
+body {
 	background-color: #C2D7FE;
 }
 
@@ -113,7 +113,7 @@ h1,h2,h3,h4,h5,h6 {
 	border: 2px solid grey;
 	margin: 0;
 	padding: 0;
-	border-radius: 140px;
+	border-radius: 800px;
 	overflow: hidden;
 
 }
