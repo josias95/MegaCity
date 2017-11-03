@@ -2,6 +2,10 @@
 
 <h1>Facturas</h1>
 
+  <%= link_to "Facturas aprobadas", facturas_path(:estado=>"aprobado") %>
+  <%= link_to "Facturas denegadas", facturas_path(:estado=>"denegado") %>
+  <%= link_to "Facturas pendientes", facturas_path(:estado=> "") %>
+
 <table>
   <thead>
     <tr>
@@ -16,7 +20,7 @@
   <tbody>
     <% @facturas.each do |factura| %>
       <tr>
-        <td><%= factura.usuario_id %></td>
+        <td><%= Usuario.find(factura.usuario_id).nombre %></td>
         <td><%= factura.estado %></td>
         <td><%= factura.valor %></td>
         <td><%= factura.created_at %></td>
@@ -27,6 +31,4 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
 

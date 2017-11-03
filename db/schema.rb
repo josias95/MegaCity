@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171102203247) do
+ActiveRecord::Schema.define(version: 20171103025824) do
 
   create_table "almacens", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "nombre"
@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 20171102203247) do
   end
 
   create_table "facturas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "estado"
     t.integer "valor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -41,6 +40,7 @@ ActiveRecord::Schema.define(version: 20171102203247) do
     t.integer "cover_file_size"
     t.datetime "cover_updated_at"
     t.bigint "usuario_id"
+    t.string "estado", default: ""
     t.index ["usuario_id"], name: "index_facturas_on_usuario_id"
   end
 

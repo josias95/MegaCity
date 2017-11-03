@@ -13,7 +13,7 @@
 
     <div class="field">
         <%= form.label :estado %>
-        <%= form.text_field :estado, id: :factura_estado %>
+        <%= form.select :estado, [['aprobado', "aprobado"], ['denegado', "denegado"]] %>
     </div>
 
     <div class="field">

@@ -5,7 +5,11 @@ class FacturasController < ApplicationController
   # GET /facturas
   # GET /facturas.json
   def index
-    @facturas = Factura.all
+    if params[:estado]
+      @facturas = Factura.where(:estado => params[:estado])
+    else 
+      @facturas = Factura.all
+    end
   end
 
   def indexCliente

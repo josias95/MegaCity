@@ -35,7 +35,7 @@
 
   <div class="field">
     <%= f.label :genero %><br />
-    <%= f.text_field :genero, autofocus: true %>
+    <%= f.select :genero, [['masculino', "masculino"], ['femenino', "femenino"]] %>
   </div>
 
   <div class="field">
