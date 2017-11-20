@@ -3,17 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display|Teko" rel="stylesheet">
 
-    <title>Centro Comercial MegaCity</title>
+    <title>MegaCity</title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
+  <body>       
+        <%= render :partial => 'layouts/header' %>
+        <p class="notice"><%= notice %></p>
+        <!--<p class="alert"><%= alert %></p>-->
 
-    <%= yield %>
+        <%= yield %>
 
-  </body>
+    </body>    
 </html>

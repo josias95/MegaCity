@@ -1,37 +1,171 @@
 <p id="notice"><%= notice %></p>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Centro Comercial MegaCity</title>
-</head>
-
-<body>
-    <header>
-        <div class="row">
-            <div class="large-2 columns">
-                <h1>MegaCity</h1>
+		<div class="row somos">
+            <div class="small-12 columns"> 
+                <h4>¿Quienes somos?</h4>
             </div>
-
-            <div class="large-2 columns correo">
-                <p>Correo Electronico</p>
-            </div>
-
-            <div class="large-2 columns text_mail">
-                <input type="email" name="user_mail" id="mail">
-            </div>
-
-            <div class="large-2 columns contra">
-                <p>Contraseña</p>
-            </div>
-
-            <div class="large-2 columns text_contra pass">
-                <input type="password" name="user_password" id="password">
-            </div>
-
-            <div class="large-1 columns btn">
-                <a href="about.html" class="button">Log In</a>
+           
+            <div class="small-12 columns">
+                <p>La mision del centro comercial es Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ante dui, venenatis nec cursus et, commodo nec quam. Vestibulum vulputate at tortor eu vulputate. Phasellus et dapibus libero.</p>
             </div>
         </div>
-    </header>
-</body>
+        <div class="row objetivos">
+        	<div class="small-5 columns">
+        		<h4>Mision</h4>
+        		<div class="row mision">
+        			<div class="small-12"> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ante dui, venenatis nec cursus et, commodo nec quam. Vestibulum vulputate at tortor eu vulputate. Phasellus et dapibus libero</p></div>
+        		</div>
+        	</div>
+        	<div class="small-5 columns">
+        		<h4>Vision</h4>
+        		<div class="row">
+        			<div class="small-12 vision"> 
+        				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ante dui, venenatis nec cursus et, commodo nec quam. Vestibulum vulputate at tortor eu vulputate. Phasellus et dapibus libero</p>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+		
+        <div class="row">
+            <div class="small-12 columns">
+        		<div class="flexslider">
+        		  <ul class="slides">
+        		    <li>
+        		      <%= image_tag  "front.jpg",:class=>""%>
+                    </li>  
+        		    <li>
+        		      <%= image_tag  "front1.jpg",:class=>""%>
+        		    </li>
+        		    <li>
+        		     <%= image_tag  "front2.jpg",:class=>""%>
+        		    </li>
+        		  </ul>
+        		</div>
+            </div>
+        </div>
 
+        <div class="row categorias1">
+            <div class="small-6 large-4 columns">
+                <h4>Cafes</h4>
+            </div>
+            <div class="small-6 large-4 columns">
+                <h4>Cinema</h4>
+            </div>
+        </div>
+
+        <div class="row img_categorias1">
+            <div class="small-6 columns">
+                <%= image_tag  "cafes.png",:class=>"cate1"%>
+            </div>
+            <div class="small-6 columns">
+                <%= image_tag  "cinema.jpg",:class=>"cate1"%>
+            </div>  
+        </div>
+       
+
+       <div class="row categorias2">
+            <div class="small-6 columns">
+                <h4>Comida</h4>
+            </div>
+            <div class="small-6 columns">
+                <h4>Deportes</h4>
+            </div>
+        </div>
+
+        <div class="row img_categorias2">            
+            <div class="small-6 columns">
+                <%= image_tag  "comida.jpg",:class=>"cate1"%>
+            </div>
+            <div class="small-6 columns">
+                <%= image_tag  "deportes.jpg",:class=>"cate1"%>
+            </div>           
+        </div>
+
+        <div class="row categorias3">
+            <div class="small-6 columns">
+                <h4>Ropa</h4>
+            </div>
+            <div class="small-6 columns">
+                <h4>Supermercado</h4>
+            </div>
+        </div>
+        <div class="row img_categorias3">            
+            <div class="small-6 columns">
+                <%= image_tag  "ropa.jpg",:class=>"cate1"%>
+            </div>
+            <div class="small-6 columns">
+                <%= image_tag  "supermercado.jpg",:class=>"cate1"%>
+            </div>           
+        </div>
+
+        <div class="row eventos">
+            <div class="small-12 columns">
+                <div class="flexslider">
+                <h1>SEPTIEMBRE</h1>
+                  <ul class="slides">
+                    <li>
+                      <%= image_tag  "front.jpg",:class=>""%>
+                    </li>  
+                    <li>
+                      <%= image_tag  "front1.jpg",:class=>""%>
+                    </li>
+                    <li>
+                     <%= image_tag  "front2.jpg",:class=>""%>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row horario_atencion">
+            <div class="small-12 columns"><h1>Horarios de atencion</h1></div>
+        </div>
+
+        <div class="row horarios">
+            <div class="small-12 large4 columns hora_admin">
+                <h3>Administracion</h3>
+                <p>Lunes a Viernes : 8 am a 12 pm  y  2 pm a 6 pm</p>
+            </div>
+            <div class="small-12 large-4 columns hora_almacenes">
+                <h3>Almacenes</h3>
+                <p>Lunes a Sabado :  8 am a 12 pm  y   2 pm a 9 pm</p>
+                <p>Domingo : 8 am a 12 pm  </p>
+            </div>
+            <div class="small-12 large-4 columns hora_cine">
+                <h3>Cinema</h3>
+                <p>Lunes a Domingo : 2 pm a 12 am </p>
+            </div>
+        </div>
+
+        <div class="row contacto"> <div class="small-12 columns"><h1>Contactanos</h1></div></div>
+        <div class="row">
+            <div class="small-12 columns">
+                <form action="index.html.erb" method="post">
+                    Nombre : <input type="text" name="nombre_usuario"><br>
+                    Correo : <input type="email" name="email_usuario"><br>
+                    Asunto : <input type="text" name="asunto_usuario"><br>
+                    Mensaje : <textarea name="textarea" rows="10" cols="50"></textarea><br>
+                    <a class="button expanded btn_contacto" href="#">Enviar  </a>
+                </form>
+            </div>
+        </div>
+        
+        <div class="row expanded contacto ">
+            <div class="small-4 columns text-center"><h4>Direccion</h4></div>
+            <div class="small-4 columns text-center"><h4>Telefono</h4></div>
+            <div class="small-4 columns text-center"><h4>Email</h4></div>
+
+        </div>
+
+
+        <div class="row expanded">
+            <div class="small-4 columns direccion text-center"><i class="fa fa-map-marker fa-3x " aria-hidden="true"></i></div>
+            <div class="small-4 columns tel text-center"><i class="fa fa-mobile fa-3x " aria-hidden="true"></i></div>
+            <div class="small-4 columns mail text-center"><i class="fa fa-envelope-o fa-3x " aria-hidden="true"></i></div>
+        </div>
+
+        <div class="row expanded">
+            <div class="small-4 columns text-center"><p>Carrera 15 # 3-5</p></div>
+            <div class="small-4 columns text-center"><p>3164206594</p></div>
+            <div class="small-4 columns text-center"><p>MegaCity@hotmail.com</p></div>
+        </div>

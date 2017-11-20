@@ -1,0 +1,32 @@
+<%= form_with(model: premio, local: true) do |form| %>
+  <% if premio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(premio.errors.count, "error") %> prohibited this premio from being saved:</h2>
+
+      <ul>
+      <% premio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :premio_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion, id: :premio_descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor %>
+    <%= form.number_field :valor, id: :premio_valor %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+<h1>Subir Factura</h1>
+
+<%= form_for([@usuario, @factura]) do |form| %>
+    <div class="field">
+        Factura: <%= form.file_field :cover %>
+    </div>
+
+    <div class="actions">
+        <%= form.submit %>
+    </div>
+<% end %>

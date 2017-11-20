@@ -1,0 +1,32 @@
+<%= form_with(model: factura, local: true) do |form| %>
+    <% if factura.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(factura.errors.count, "error") %> prohibited this factura from being saved:</h2>
+
+            <ul>
+                <% factura.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+        <%= form.label :estado %>
+        <%= form.select :estado, [['aprobado', "aprobado"], ['denegado', "denegado"]] %>
+    </div>
+
+    <div class="field">
+        <%= form.label :valor %>
+        <%= form.number_field :valor, id: :factura_valor %>
+    </div>
+        <div class="field">
+            <% if current_usuario.is_admin? %>
+                <%= image_tag @factura.cover.url(:thumb) %>
+            <%end%>
+            <%= form.file_field :cover %>
+        </div>
+    <div class="actions">
+        <%= form.submit %>
+    </div>
+<% end %>

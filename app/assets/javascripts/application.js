@@ -11,11 +11,19 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require foundation
 //= require turbolinks
+//= require jquery
+//= require jquery_ujs
 //= require_tree .
-//= require foundation
-$(document).foundation();
-
-
-$(function(){ $(document).foundation(); });
+//= require foundation   
+//= require jquery.flexslider
+  $( document ).ready(function() {
+// Handler for .ready() called.
+	$( document ).on('turbolinks:load', function() { 
+		$(document).foundation();
+		$('.flexslider').flexslider({
+			prevText: "",
+			nextText: ""
+		});
+	 })
+});

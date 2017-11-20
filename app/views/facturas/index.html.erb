@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Facturas</h1>
+
+  <%= link_to "Facturas aprobadas", facturas_path(:estado=>"aprobado") %>
+  <%= link_to "Facturas denegadas", facturas_path(:estado=>"denegado") %>
+  <%= link_to "Facturas pendientes", facturas_path(:estado=> "") %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usuario</th>
+      <th>Estado</th>
+      <th>Valor</th>
+      <th>Fecha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @facturas.each do |factura| %>
+      <tr>
+        <td><%= Usuario.find(factura.usuario_id).nombre %></td>
+        <td><%= factura.estado %></td>
+        <td><%= factura.valor %></td>
+        <td><%= factura.created_at %></td>
+        <td><%= link_to 'Show', factura %></td>
+        <td><%= link_to 'Edit', edit_factura_path(factura) %></td>
+        <td><%= link_to 'Destroy', factura, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
